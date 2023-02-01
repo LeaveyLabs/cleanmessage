@@ -8,7 +8,7 @@
 //import UIKit
 //
 //class UpdateAvailableVC: UIViewController {
-//    
+//
 //    @IBOutlet var updateButton: SimpleButton!
 //    @IBOutlet var dismissButton: SimpleButton!
 //    @IBOutlet var titleLabel: UILabel!
@@ -25,14 +25,14 @@
 //    var isMandatory: Bool!
 //
 //    //MARK: - Initialization
-//    
-//    
+//
+//
 //    class func create(isMandatory: Bool) -> UpdateAvailableVC {
 //        let vc = UIStoryboard(name: Constants.SBID.SB.Misc, bundle: nil).instantiateViewController(withIdentifier: Constants.SBID.VC.UpdateAvailable) as! UpdateAvailableVC
 //        vc.isMandatory = isMandatory
 //        return vc
 //    }
-//    
+//
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        titleLabel.font = AppFont.bold.size(30)
@@ -45,9 +45,9 @@
 //        }
 //        DeviceService.shared.didReceiveNewUpdateAlert(forVersion: Constants.updateAvailableVersion)
 //    }
-//    
+//
 //    //MARK: - Setup
-//    
+//
 //    func setupButtons() {
 //        updateButton.internalButton.addTarget(self, action: #selector(updateButtonDidPressed), for: .touchUpInside)
 //        dismissButton.internalButton.addTarget(self, action: #selector(dismissButtonDidPressed), for: .touchUpInside)
@@ -56,13 +56,13 @@
 //        dismissButton.alpha = 0.5
 //        dismissButton.isHidden = isMandatory
 //    }
-//    
+//
 //    //MARK: - Interaction
-//    
+//
 //    @objc func updateButtonDidPressed() {
 //        openURL(Constants.appStoreLink)
 //    }
-//    
+//
 //    @objc func dismissButtonDidPressed() {
 //        dismiss(animated: true)
 //    }

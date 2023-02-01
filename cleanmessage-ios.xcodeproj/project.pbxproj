@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474E2BB0298B17FE00048439 /* ScreenDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E2BAE298B17FD00048439 /* ScreenDemoVC.swift */; };
+		474E2BB3298B180A00048439 /* PageDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E2BB2298B180A00048439 /* PageDemoVC.swift */; };
+		474E2BB7298B194B00048439 /* Misc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474E2BB6298B194B00048439 /* Misc.storyboard */; };
+		474E2BBC298B1A1500048439 /* FeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474E2BB8298B1A1500048439 /* FeatureView.xib */; };
+		474E2BBD298B1A1500048439 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E2BB9298B1A1500048439 /* SimpleButton.swift */; };
+		474E2BBE298B1A1500048439 /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E2BBA298B1A1500048439 /* FeatureView.swift */; };
+		474E2BBF298B1A1500048439 /* SimpleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474E2BBB298B1A1500048439 /* SimpleButton.xib */; };
+		474E2BC1298B1BFF00048439 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E2BC0298B1BFF00048439 /* Feature.swift */; };
 		47653FBB2988731C00AEF4DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47653FBA2988731C00AEF4DE /* AppDelegate.swift */; };
 		47653FBD2988731C00AEF4DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47653FBC2988731C00AEF4DE /* SceneDelegate.swift */; };
 		47653FBF2988731C00AEF4DE /* ChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47653FBE2988731C00AEF4DE /* ChatsVC.swift */; };
@@ -139,6 +147,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		474E2BAE298B17FD00048439 /* ScreenDemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenDemoVC.swift; sourceTree = "<group>"; };
+		474E2BB2298B180A00048439 /* PageDemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageDemoVC.swift; sourceTree = "<group>"; };
+		474E2BB6298B194B00048439 /* Misc.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Misc.storyboard; sourceTree = "<group>"; };
+		474E2BB8298B1A1500048439 /* FeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeatureView.xib; sourceTree = "<group>"; };
+		474E2BB9298B1A1500048439 /* SimpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		474E2BBA298B1A1500048439 /* FeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
+		474E2BBB298B1A1500048439 /* SimpleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleButton.xib; sourceTree = "<group>"; };
+		474E2BC0298B1BFF00048439 /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		47653FB72988731C00AEF4DE /* cleanmessage-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cleanmessage-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47653FBA2988731C00AEF4DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47653FBC2988731C00AEF4DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -340,6 +356,10 @@
 		47653FEE298873BB00AEF4DE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				474E2BBA298B1A1500048439 /* FeatureView.swift */,
+				474E2BB8298B1A1500048439 /* FeatureView.xib */,
+				474E2BB9298B1A1500048439 /* SimpleButton.swift */,
+				474E2BBB298B1A1500048439 /* SimpleButton.xib */,
 				47653FF12988750800AEF4DE /* Storyboards */,
 				47653FEA298873B700AEF4DE /* ChatTableCell.swift */,
 				47653FEB298873B700AEF4DE /* ChatTableCell.xib */,
@@ -354,6 +374,7 @@
 		47653FEF298873C100AEF4DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				474E2BC0298B1BFF00048439 /* Feature.swift */,
 				47AAB2942988942F004D8022 /* Recipient */,
 				478F817A29887AF60044CD21 /* Device */,
 			);
@@ -363,6 +384,8 @@
 		47653FF0298873C900AEF4DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				474E2BB2298B180A00048439 /* PageDemoVC.swift */,
+				474E2BAE298B17FD00048439 /* ScreenDemoVC.swift */,
 				476540C62988755400AEF4DE /* Misc */,
 				47653FBA2988731C00AEF4DE /* AppDelegate.swift */,
 				47653FBC2988731C00AEF4DE /* SceneDelegate.swift */,
@@ -374,6 +397,7 @@
 		47653FF12988750800AEF4DE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				474E2BB6298B194B00048439 /* Misc.storyboard */,
 				47653FC52988731D00AEF4DE /* LaunchScreen.storyboard */,
 				47653FC02988731C00AEF4DE /* Main.storyboard */,
 			);
@@ -778,12 +802,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				474E2BB7298B194B00048439 /* Misc.storyboard in Resources */,
 				47AAB29C2988A747004D8022 /* ChatPinTableCell.xib in Resources */,
+				474E2BBF298B1A1500048439 /* SimpleButton.xib in Resources */,
 				47653FC72988731D00AEF4DE /* LaunchScreen.storyboard in Resources */,
 				47653FC42988731D00AEF4DE /* Assets.xcassets in Resources */,
 				47653FED298873B700AEF4DE /* ChatTableCell.xib in Resources */,
 				47653FC22988731C00AEF4DE /* Main.storyboard in Resources */,
 				47AAB29129888962004D8022 /* ChatAddTableCell.xib in Resources */,
+				474E2BBC298B1A1500048439 /* FeatureView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +841,7 @@
 				476540A92988754900AEF4DE /* UIViewController+Child.swift in Sources */,
 				4765406D2988754900AEF4DE /* Time.swift in Sources */,
 				4765408B2988754900AEF4DE /* UIButton+LoadingIndicator.swift in Sources */,
+				474E2BB3298B180A00048439 /* PageDemoVC.swift in Sources */,
 				476540B32988754900AEF4DE /* UIViewController+Loading.swift in Sources */,
 				476540B22988754900AEF4DE /* UIViewController+OpenMailApp.swift in Sources */,
 				4765406E2988754900AEF4DE /* Validate.swift in Sources */,
@@ -821,6 +849,7 @@
 				476540A32988754900AEF4DE /* UITextView+MaxLength.swift in Sources */,
 				476540742988754900AEF4DE /* CLLocationCoordinate+Heading.swift in Sources */,
 				476540BE2988754900AEF4DE /* ImagePicker.swift in Sources */,
+				474E2BC1298B1BFF00048439 /* Feature.swift in Sources */,
 				476540BC2988754900AEF4DE /* UITextField+Padding.swift in Sources */,
 				47AAB29629889437004D8022 /* Recipient.swift in Sources */,
 				4765407B2988754900AEF4DE /* StringChat+Emoji.swift in Sources */,
@@ -828,12 +857,14 @@
 				476540AF2988754900AEF4DE /* UIViewController+Window.swift in Sources */,
 				47AAB29B2988A747004D8022 /* ChatPinTableCell.swift in Sources */,
 				476540922988754900AEF4DE /* UIView+BecomeRound.swift in Sources */,
+				474E2BBE298B1A1500048439 /* FeatureView.swift in Sources */,
 				476540CC2988755400AEF4DE /* SheetVC.swift in Sources */,
 				476540D02988781500AEF4DE /* ContactsManager.swift in Sources */,
 				476540872988754900AEF4DE /* UIImage+WithSize.swift in Sources */,
 				476540A22988754900AEF4DE /* UITextView+Newline.swift in Sources */,
 				4765408C2988754900AEF4DE /* UIButton+RightSideImage.swift in Sources */,
 				4765407F2988754900AEF4DE /* String+Capitalization.swift in Sources */,
+				474E2BBD298B1A1500048439 /* SimpleButton.swift in Sources */,
 				476540832988754900AEF4DE /* UIImage+Compress.swift in Sources */,
 				476540A82988754900AEF4DE /* UIImageView+Initials.swift in Sources */,
 				476540BA2988754900AEF4DE /* UISegmentedControl+Twitter.swift in Sources */,
@@ -857,6 +888,7 @@
 				4765407E2988754900AEF4DE /* String+Pattern.swift in Sources */,
 				476540B02988754900AEF4DE /* UIViewController+MistShareActivity.swift in Sources */,
 				478F817D29887AF60044CD21 /* DeviceService.swift in Sources */,
+				474E2BB0298B17FE00048439 /* ScreenDemoVC.swift in Sources */,
 				4765406C2988754900AEF4DE /* Distance.swift in Sources */,
 				476540992988754900AEF4DE /* UIView+Shadow.swift in Sources */,
 				476540732988754900AEF4DE /* MKPlacemark+Address.swift in Sources */,
@@ -1089,6 +1121,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "cleanmessage-ios/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Clean Message";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSContactsUsageDescription = "See and pin your favorite conversations.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1100,7 +1133,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "leaveylabs.cleanmessage-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1123,6 +1156,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "cleanmessage-ios/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Clean Message";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSContactsUsageDescription = "See and pin your favorite conversations.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1134,7 +1168,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "leaveylabs.cleanmessage-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

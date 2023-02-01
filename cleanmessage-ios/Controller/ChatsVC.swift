@@ -8,6 +8,7 @@
 import UIKit
 import Contacts
 import ContactsUI
+import MessageUI
 
 class ChatsVC: UIViewController {
     
@@ -25,7 +26,11 @@ class ChatsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        handleContactsAccess()
+//        handleContactsAccess()
+        if !DeviceService.shared.hasSeenTutorial() {
+            DeviceService.shared.viewTutorial()
+            present(PageDemoVC.create(), animated: true)
+        }
     }
     
     //MARK: - Setup
@@ -77,6 +82,9 @@ class ChatsVC: UIViewController {
     
     @IBAction func moreButtonPressed() {
         let moreController = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        moreController.addAction(UIAlertAction(title: "How it works", style: .default, handler: { uiAlertAction in
+            self.present(PageDemoVC.create(), animated: true)
+        }))
         moreController.addAction(UIAlertAction(title: "Rate \(Constants.appDisplayName)", style: .default, handler: { uiAlertAction in
             AppStoreReviewManager.offerViewPromptUponUserRequest()
         }))
@@ -85,6 +93,9 @@ class ChatsVC: UIViewController {
         }))
         moreController.addAction(UIAlertAction(title: "Share feedback", style: .default, handler: { uiAlertAction in
             self.sendMessageTo(["16159754270"], body: "Hey Adam, ")
+        }))
+        moreController.addAction(UIAlertAction(title: "Learn more", style: .default, handler: { uiAlertAction in
+            self.openURL(Constants.companyLink)
         }))
         moreController.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { uiAlertAction in
             //do nothing
@@ -98,6 +109,7 @@ class ChatsVC: UIViewController {
         if (messageComposer.canSendText()) {
             let messageComposeVC = messageComposer.configuredMessageComposeViewController(recipients: numbers, body: body)
             present(messageComposeVC, animated: true)
+
         } else {
             AlertManager.showAlert(title: "Cannot Send Text Message", subtitle: "Your device is not able to send text messages.", primaryActionTitle: "OK", primaryActionHandler: {}, on: self)
         }
@@ -223,7 +235,7 @@ extension ChatsVC: CNContactPickerDelegate {
     func addRecipient(from contact: CNContact,
                       withSpecificNumber specificNumber: String? = nil,
                       withSpecificEmail specificEmail: String? = nil) {
-        var contactProperty: String? = specificEmail ?? specificNumber ?? contact.bestPhoneNumberE164
+        let contactProperty: String? = specificEmail ?? specificNumber ?? contact.bestPhoneNumberE164
         guard let contactProperty else {
             AlertManager.showInfoCentered("Selected contact does not have a proper phone number", "", on: self)
             return
