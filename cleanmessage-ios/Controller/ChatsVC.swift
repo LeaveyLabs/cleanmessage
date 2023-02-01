@@ -135,7 +135,7 @@ extension ChatsVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = UIContextualAction(style: .destructive, title: "Unpin") { (action, sourceView, completionHandler) in
+        let delete = UIContextualAction(style: .destructive, title: "Remove") { (action, sourceView, completionHandler) in
             self.potentialRecipients.remove(at: indexPath.row)
             DispatchQueue.main.async {
 //                self.tableView.reloadRows(at: [indexPath], with: .middle)
@@ -225,10 +225,18 @@ extension ChatsVC: CNContactPickerDelegate {
 //    }
     
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contactProperty: CNContactProperty) {
-        if let stringValue = contactProperty.value as? String, stringValue == "emailAddresses" {
+        if contactProperty.key == "emailAddresses" {
+            guard !potentialRecipients.contains(where: { $0.contactProperty == contactProperty.value as! String}) else {
+                AlertManager.showInfoCentered("Contact already added", "", on: self)
+                return
+            }
             addRecipient(from: contactProperty.contact, withSpecificEmail: contactProperty.value as? String)
-        } else {
-            addRecipient(from: contactProperty.contact, withSpecificNumber: contactProperty.value as? String)
+        } else if let number = contactProperty.value as? CNPhoneNumber {
+            guard !potentialRecipients.contains(where: { $0.contactProperty == number.stringValue}) else {
+                AlertManager.showInfoCentered("Contact already added", "", on: self)
+                return
+            }
+            addRecipient(from: contactProperty.contact, withSpecificNumber: number.stringValue)
         }
     }
     
