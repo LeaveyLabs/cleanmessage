@@ -46,7 +46,9 @@ class PageDemoVC: UIPageViewController {
     func setupPageVC() {
         vcs = [ScreenDemoVC.create(type: .one),
                ScreenDemoVC.create(type: .two),
-               ScreenDemoVC.create(type: .three)]
+               ScreenDemoVC.create(type: .three),
+               ScreenDemoVC.create(type: .four),
+               ScreenDemoVC.create(type: .five)]
 //        if isDisplayedInAuth {
 //            vcs.insert(AuthStartVC.create(), at: 0)
 //        }

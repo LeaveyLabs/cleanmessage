@@ -15,7 +15,7 @@ class ScreenDemoVC: UIViewController {
     //MARK: - Initialization
     
     enum ScreenDemoType: CaseIterable {
-        case one, two, three
+        case one, two, three, four, five
     }
     
     class func create(type: ScreenDemoType) -> ScreenDemoVC {
@@ -40,6 +40,10 @@ class ScreenDemoVC: UIViewController {
             screenImageView.image = UIImage(named: "ss2-clear")
         case .three:
             screenImageView.image = UIImage(named: "ss3-clear")
+        case .four:
+            screenImageView.image = UIImage(named: "ss4-clear")
+        case .five:
+            screenImageView.image = UIImage(named: "ss5-clear")
         default:
             break
         }
