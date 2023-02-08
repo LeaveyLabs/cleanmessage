@@ -94,9 +94,9 @@ class ChatsVC: UIViewController {
         moreController.addAction(UIAlertAction(title: "Share feedback", style: .default, handler: { uiAlertAction in
             self.sendMessageTo(["16159754270"], body: "Hey Adam, ")
         }))
-        moreController.addAction(UIAlertAction(title: "Learn more", style: .default, handler: { uiAlertAction in
-            self.openURL(Constants.companyLink)
-        }))
+//        moreController.addAction(UIAlertAction(title: "Learn more", style: .default, handler: { uiAlertAction in
+//            self.openURL(Constants.companyLink)
+//        }))
         moreController.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { uiAlertAction in
             //do nothing
         }))
